@@ -16,7 +16,7 @@ class DeleteUser implements DeletesUsers
     public function delete($user)
     {
         $servname = "localhost"; 
-        $dbname = 'db_'.Auth::token(); 
+        $dbname = 'db_'.Auth::user()->token; 
         $usr = "root"; 
         $pass = "";
         try{
